@@ -86,6 +86,8 @@ public class DialogManager : MonoBehaviour
         SpeechNameBox.text = DialogScript[ScriptIndex].Name;
         yield return new WaitForSeconds(0.1f);
         SpeechBox.text = "";
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
+        instance.start();
         foreach (char letter in Sentence.ToCharArray())
         {
             if (writing == false)
@@ -96,6 +98,7 @@ public class DialogManager : MonoBehaviour
             SpeechBox.text += letter;
             yield return new WaitForSeconds(ReadinSpeed);
         }
+        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         writing = false;
     }
 
