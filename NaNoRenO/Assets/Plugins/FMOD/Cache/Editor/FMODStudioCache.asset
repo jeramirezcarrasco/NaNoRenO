@@ -109,7 +109,7 @@ MonoBehaviour:
   Path: event:/FX/ScreenShake
   guid: 355cf8e9e6024f44aa20d0e5d2e0359c
   Banks:
-  - {fileID: 2294780434212727577}
+  - {fileID: -1494490285107483524}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -117,6 +117,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2000
+--- !u!114 &-3035583665823134743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637207467398380813
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-2409341853191261731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +153,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1494490285107483524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Desktop/FX.bank
+  SubDir: 
+  lastModified: 637207467398370813
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1213747135037398688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,19 +221,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 3846594998522420987}
-  - {fileID: 2294780434212727577}
-  - {fileID: 6837256093303216381}
-  - {fileID: 68192676592904083}
+  - {fileID: -1494490285107483524}
+  - {fileID: -3035583665823134743}
+  - {fileID: 2957852072922249005}
   EditorEvents:
   - {fileID: 2720776845316869778}
   - {fileID: 2170961045757777111}
   - {fileID: -4108909256273719522}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6837256093303216381}
+  - {fileID: -3035583665823134743}
   StringsBanks:
   - {fileID: 3846594998522420987}
-  stringsBankWriteTime: 637207762332686235
+  stringsBankWriteTime: 637207467398390814
   cacheVersion: 3
 --- !u!114 &68192676592904083
 MonoBehaviour:
@@ -216,7 +252,7 @@ MonoBehaviour:
   lastModified: 637207762332706226
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &151405353547629857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +322,7 @@ MonoBehaviour:
   Path: event:/FX/PhoneRing
   guid: d8eb606ab204e84184a583ad2366279b
   Banks:
-  - {fileID: 2294780434212727577}
+  - {fileID: -1494490285107483524}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -311,7 +347,7 @@ MonoBehaviour:
   lastModified: 637207762332916231
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2720776845316869778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,7 +363,7 @@ MonoBehaviour:
   Path: event:/FX/SpeechMid
   guid: f2b337aa0bf0b0439931dda685acd058
   Banks:
-  - {fileID: 2294780434212727577}
+  - {fileID: -1494490285107483524}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -335,6 +371,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 110
+--- !u!114 &2957852072922249005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Audio/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637207467398400814
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3846594998522420987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -349,7 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/Audio/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637207762332686235
+  lastModified: 637207467398390814
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -480,7 +534,7 @@ MonoBehaviour:
   lastModified: 637207762332666325
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &7745933392871622981
 MonoBehaviour:
   m_ObjectHideFlags: 0
