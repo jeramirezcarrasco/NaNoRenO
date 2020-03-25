@@ -61,7 +61,7 @@ public class DialogManager : MonoBehaviour
     {
         StopAllCoroutines();
         nextSentenceActive = true;
-        StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog, DialogScript[ScriptIndex].fmodEvent));
+        StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog));
     }
 
     public void DisplayNextSentence()
@@ -76,20 +76,16 @@ public class DialogManager : MonoBehaviour
             ScriptIndex++;
             StopAllCoroutines();
             ScriptActions();
-            StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog, DialogScript[ScriptIndex].fmodEvent));
+            StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog));
         }
     }
 
-    IEnumerator TypeSentence(string Sentence, string fmodEvent)
+    IEnumerator TypeSentence(string Sentence)
     {
         writing = true;
         SpeechNameBox.text = DialogScript[ScriptIndex].Name;
         yield return new WaitForSeconds(0.1f);
         SpeechBox.text = "";
-        if (fmodEvent != null)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
-        }
         FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
         instance.start();
         foreach (char letter in Sentence.ToCharArray())
@@ -136,10 +132,15 @@ public class DialogManager : MonoBehaviour
             characterPopOut.ScreenShake(
                 DialogScript[ScriptIndex].ShakeTime,
                 DialogScript[ScriptIndex].ShakeRange);
+            FMODUnity.RuntimeManager.PlayOneShot("event:/FX/ScreenShake");
         }
         if(DialogScript[ScriptIndex].ChangeBackGround)
         {
             StartCoroutine(ChangeBackGround(DialogScript[ScriptIndex].BackGroundToChange));
+        }
+        if (DialogScript[ScriptIndex].fmodEvent != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(DialogScript[ScriptIndex].fmodEvent);
         }
     }
 
