@@ -61,7 +61,7 @@ public class DialogManager : MonoBehaviour
     {
         StopAllCoroutines();
         nextSentenceActive = true;
-        StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog));
+        StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog, DialogScript[ScriptIndex].fmodEvent));
     }
 
     public void DisplayNextSentence()
@@ -76,16 +76,20 @@ public class DialogManager : MonoBehaviour
             ScriptIndex++;
             StopAllCoroutines();
             ScriptActions();
-            StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog));
+            StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog, DialogScript[ScriptIndex].fmodEvent));
         }
     }
 
-    IEnumerator TypeSentence(string Sentence)
+    IEnumerator TypeSentence(string Sentence, string fmodEvent)
     {
         writing = true;
         SpeechNameBox.text = DialogScript[ScriptIndex].Name;
         yield return new WaitForSeconds(0.1f);
         SpeechBox.text = "";
+        if (fmodEvent != null)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(fmodEvent);
+        }
         FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
         instance.start();
         foreach (char letter in Sentence.ToCharArray())
@@ -176,6 +180,9 @@ public class VNScript
 {
     public String Name;
     [TextArea(10,20)] public String TextDialog;
+
+    [FMODUnity.EventRef]
+    public string fmodEvent;
 
     public bool CharacterFadeIn;
     public int CharacterToFaceIn;
