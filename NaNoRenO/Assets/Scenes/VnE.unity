@@ -282,10 +282,53 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 5.399994
       objectReference: {fileID: 0}
-    - target: {fileID: 6363991403427012424, guid: 84ff0273fb7064041b711ed27bf9351a,
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -1.2000732
+      propertyPath: m_text
+      value: "Please don\u2019t make the same mistake, don\u2019t leave your social
+        media \n12345678901214161820222426283032343638404244464850\naccounts open
+        in the school computers.\nThese are for school work, not to check your latest
+        NanoBook status"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_isTextTruncated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363991403427012426, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6363991403511234073, guid: 84ff0273fb7064041b711ed27bf9351a,
         type: 3}
