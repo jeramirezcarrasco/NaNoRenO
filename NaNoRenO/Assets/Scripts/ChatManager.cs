@@ -15,9 +15,6 @@ public class ChatManager : MonoBehaviour
         Text = gameObject.transform.GetChild(0).gameObject;
         boxBackground = GetComponent<RectTransform>();
         textBackground = Text.GetComponent<RectTransform>();
-        Debug.Log(Screen.width);
-        Text.GetComponent<TextMeshProUGUI>().fontSize = Screen.width * 0.009f;
-
     }
 
     // Update is called once per frame
