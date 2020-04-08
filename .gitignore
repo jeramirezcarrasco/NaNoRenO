@@ -63,7 +63,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 NaNoRenO/Temp/UnityLockfile
+<<<<<<< HEAD
 NaNoRenO/Library/SourceAssetDB-lock
 NaNoRenO/Library/SourceAssetDB
 NaNoRenO/Library/ArtifactDB
 NaNoRenO/Library/SourceAssetDB
+=======
+>>>>>>> parent of 94ef314... Merge pull request #1 from jeramirezcarrasco/audio

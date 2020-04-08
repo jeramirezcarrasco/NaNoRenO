@@ -86,8 +86,6 @@ public class DialogManager : MonoBehaviour
         SpeechNameBox.text = DialogScript[ScriptIndex].Name;
         yield return new WaitForSeconds(0.1f);
         SpeechBox.text = "";
-        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
-        instance.start();
         foreach (char letter in Sentence.ToCharArray())
         {
             if (writing == false)
@@ -98,7 +96,6 @@ public class DialogManager : MonoBehaviour
             SpeechBox.text += letter;
             yield return new WaitForSeconds(ReadinSpeed);
         }
-        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         writing = false;
     }
 
@@ -132,15 +129,10 @@ public class DialogManager : MonoBehaviour
             characterPopOut.ScreenShake(
                 DialogScript[ScriptIndex].ShakeTime,
                 DialogScript[ScriptIndex].ShakeRange);
-            FMODUnity.RuntimeManager.PlayOneShot("event:/FX/ScreenShake");
         }
         if(DialogScript[ScriptIndex].ChangeBackGround)
         {
             StartCoroutine(ChangeBackGround(DialogScript[ScriptIndex].BackGroundToChange));
-        }
-        if (DialogScript[ScriptIndex].fmodEvent != null)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(DialogScript[ScriptIndex].fmodEvent);
         }
     }
 
@@ -181,9 +173,6 @@ public class VNScript
 {
     public String Name;
     [TextArea(10,20)] public String TextDialog;
-
-    [FMODUnity.EventRef]
-    public string fmodEvent;
 
     public bool CharacterFadeIn;
     public int CharacterToFaceIn;
