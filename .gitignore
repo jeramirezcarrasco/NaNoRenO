@@ -63,3 +63,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 NaNoRenO/Temp/UnityLockfile
+NaNoRenO/Library/SourceAssetDB-lock
+NaNoRenO/Library/SourceAssetDB
+NaNoRenO/Library/ArtifactDB
