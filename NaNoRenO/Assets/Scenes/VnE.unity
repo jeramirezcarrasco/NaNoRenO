@@ -440,5 +440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 6363991404386883338, guid: 84ff0273fb7064041b711ed27bf9351a,
+        type: 3}
+      propertyPath: DialogScript.Array.data[8].fmodEvent
+      value: event:/FX/PhoneRing
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84ff0273fb7064041b711ed27bf9351a, type: 3}
