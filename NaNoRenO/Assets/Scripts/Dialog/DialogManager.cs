@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
@@ -13,11 +14,15 @@ public class DialogManager : MonoBehaviour
     bool nextSentenceActive = false;
     [NonSerialized] public bool writing = false;
     [SerializeField] bool Debugger;
-    [SerializeField] VNScript[] DialogScript;
     [SerializeField] CharacterPopOut characterPopOut;
     [SerializeField] Sprite[] backGrounds;
     [SerializeField] Image BackGround;
-    float ReadinSpeed = 0.01f;
+    [SerializeField] GameObject Panel_Speech;
+    [SerializeField] GameObject NameSpeechBox;
+    [SerializeField] GameObject SpeechBoxSpeech;
+    [SerializeField] VNScript[] DialogScript;
+
+    float ReadinSpeed = 0.02f;
     float CurrReadingSpeed = 0.01f;
     int ScriptIndex;
 
@@ -59,14 +64,24 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog()
     {
+        Panel_Speech.SetActive(true);
         StopAllCoroutines();
         nextSentenceActive = true;
+        if (DialogScript[ScriptIndex].Name == "")
+        {
+            NameSpeechBox.SetActive(false);
+        }
+        else
+        {
+            SpeechNameBox.text = DialogScript[ScriptIndex].Name;
+        }
+        ScriptActions();
         StartCoroutine(TypeSentence(DialogScript[ScriptIndex].TextDialog));
     }
 
     public void DisplayNextSentence()
     {
-        if (ScriptIndex > DialogScript.Length)
+        if (ScriptIndex + 1 >= DialogScript.Length)
         {
             EndDialod();
             return;
@@ -82,29 +97,49 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeSentence(string Sentence)
     {
-        writing = true;
-        SpeechNameBox.text = DialogScript[ScriptIndex].Name;
-        yield return new WaitForSeconds(0.1f);
-        SpeechBox.text = "";
-        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
-        instance.start();
-        foreach (char letter in Sentence.ToCharArray())
+        if(Sentence == "")
         {
-            if (writing == false)
-            {
-                SpeechBox.text = Sentence;
-                break;
-            }
-            SpeechBox.text += letter;
-            yield return new WaitForSeconds(ReadinSpeed);
+            SpeechBox.text = "";
+            SpeechBoxSpeech.SetActive(false);
+            yield return new WaitForSeconds(1);
+            DisplayNextSentence();
         }
-        instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-        writing = false;
+        else
+        {
+            SpeechBoxSpeech.SetActive(true);
+            writing = true;
+            yield return new WaitForSeconds(0.1f);
+            SpeechBox.text = "";
+            FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance("event:/FX/SpeechMid");
+            instance.start();
+            foreach (char letter in Sentence.ToCharArray())
+            {
+                if (writing == false)
+                {
+                    SpeechBox.text = Sentence;
+                    break;
+                }
+                SpeechBox.text += letter;
+                yield return new WaitForSeconds(ReadinSpeed);
+            }
+            instance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            writing = false;
+        }
+        
     }
 
     public void ScriptActions()
     {
-        SpeechNameBox.text = DialogScript[ScriptIndex].Name;
+        if(DialogScript[ScriptIndex].Name == "")
+        {
+            NameSpeechBox.SetActive(false);
+        }
+        else
+        {
+            NameSpeechBox.SetActive(true);
+            SpeechNameBox.text = DialogScript[ScriptIndex].Name;
+        }
+        
 
         if (DialogScript[ScriptIndex].CharacterFadeIn)
         {
@@ -142,15 +177,22 @@ public class DialogManager : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(DialogScript[ScriptIndex].fmodEvent);
         }
+        if(DialogScript[ScriptIndex].CallFunction)
+        {
+            Debug.Log("boop");
+            DialogScript[ScriptIndex].FunctionsToCall.Invoke();
+        }
     }
 
     IEnumerator ChangeBackGround(int nextBackGround)
     {
+        Debug.Log(nextBackGround);
         for (float f = 1f; f >= -0.05; f -= 0.05f)
         {
             BackGround.color = new Color(1, 1, 1, f);
             yield return new WaitForSeconds(0.01f);
         }
+        Debug.Log(backGrounds[nextBackGround]);
         BackGround.sprite = backGrounds[nextBackGround];
         for (float f = 0f; f <= 1; f += 0.05f)
         {
@@ -206,4 +248,7 @@ public class VNScript
 
     public bool ChangeBackGround;
     public int BackGroundToChange;
+
+    public bool CallFunction;
+    public UnityEvent FunctionsToCall;
 }

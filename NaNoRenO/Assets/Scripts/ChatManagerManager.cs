@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class ChatManagerManager : MonoBehaviour
 {
@@ -46,10 +47,10 @@ public class ChatManagerManager : MonoBehaviour
             Bussy = true;
             StartCoroutine(NextChat(Script[index].WaitTime));
         }
-        if(begun && index < Script.Length && Script[index].UserInput && !Bussy)
-        {
-            Button.SetActive(true);
-        }
+        //if(begun && index < Script.Length && Script[index].UserInput && !Bussy)
+        //{
+        //    Button.SetActive(true);
+        //}
 
     }
 
@@ -78,6 +79,10 @@ public class ChatManagerManager : MonoBehaviour
             CurrChat[CurrChat.Count - 1].transform.position = new Vector2(Thing1.transform.position.x - CurrChat[CurrChat.Count - 1].GetComponent<RectTransform>().rect.width / 2, Thing1.transform.position.y);
             MoveUp();
         }
+        if (Script[index].FunctionsToCall != null)
+        {
+            StartCoroutine(CallFunction());
+        }
     }
 
     public void MoveUp()
@@ -101,14 +106,18 @@ public class ChatManagerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         index++;
-        if(index < Script.Length)
+        if(index < Script.Length )
         {
             NewChat(Script[index].TextDialog, Script[index].Left);
         }
-        
         Bussy = false;
     }
 
+    IEnumerator CallFunction()
+    {
+        yield return new WaitForSeconds(2);
+        Script[index].FunctionsToCall.Invoke();
+    }
 
 
 }
@@ -120,4 +129,5 @@ public class ChatScript
     public bool Left;
     public float WaitTime;
     public bool UserInput;
+    public UnityEvent FunctionsToCall;
 }

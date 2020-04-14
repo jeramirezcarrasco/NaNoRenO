@@ -171,7 +171,7 @@ public class CharacterPopOut : MonoBehaviour
     {
         Image rend = Character.GetComponent<Image>();
         rend.color = new Color(1, 1, 1, 0);
-        for (float f = 0f; f <= 1; f += 0.05f)
+        for (float f = 0f; f <= 1.05; f += 0.05f)
         {
             rend.color = new Color(1, 1, 1, f);
             yield return new WaitForSeconds(fadeSpeed);

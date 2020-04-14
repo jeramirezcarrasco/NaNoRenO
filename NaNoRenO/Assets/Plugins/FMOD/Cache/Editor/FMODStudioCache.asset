@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9041592609950666529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/PhoneRing
+  m_EditorClassIdentifier: 
+  Path: event:/FX/PhoneRing
+  guid: d8eb606ab204e84184a583ad2366279b
+  Banks:
+  - {fileID: 5209527528058200644}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4916
 --- !u!114 &-7696235202657178434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40,6 +63,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 200
+--- !u!114 &-5982145668316220119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1000
+  Exists: 1
 --- !u!114 &-5869573550222293529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +101,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5776374185425692896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/ScreenShake
+  m_EditorClassIdentifier: 
+  Path: event:/FX/ScreenShake
+  guid: 355cf8e9e6024f44aa20d0e5d2e0359c
+  Banks:
+  - {fileID: 5209527528058200644}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &-5696918729551907418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +255,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2836338328448016808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/PhoneRing
+  m_EditorClassIdentifier: 
+  Path: event:/FX/PhoneRing
+  guid: d8eb606ab204e84184a583ad2366279b
+  Banks:
+  - {fileID: 7483202873639819963}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4916
 --- !u!114 &-2409341853191261731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -243,6 +332,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-1018788575902871020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 934
+  Exists: 1
 --- !u!114 &-816356249101935840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +370,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-17225198204980952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/SpeechMid
+  m_EditorClassIdentifier: 
+  Path: event:/FX/SpeechMid
+  guid: f2b337aa0bf0b0439931dda685acd058
+  Banks:
+  - {fileID: 5209527528058200644}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 110
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,19 +406,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 3846594998522420987}
-  - {fileID: 7211978423208304708}
-  - {fileID: -5696918729551907418}
-  - {fileID: 6810525191228032937}
+  - {fileID: -1018788575902871020}
+  - {fileID: 5209527528058200644}
+  - {fileID: 1709377797357231217}
+  - {fileID: 1656793084427104276}
   EditorEvents:
-  - {fileID: 2720776845316869778}
-  - {fileID: 2170961045757777111}
-  - {fileID: -4108909256273719522}
+  - {fileID: -5776374185425692896}
+  - {fileID: -9041592609950666529}
+  - {fileID: -17225198204980952}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -5696918729551907418}
+  - {fileID: 1709377797357231217}
   StringsBanks:
-  - {fileID: 3846594998522420987}
+  - {fileID: -1018788575902871020}
   stringsBankWriteTime: 637218896040000000
   cacheVersion: 3
 --- !u!114 &567161232004587
@@ -361,6 +493,46 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1656793084427104276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 470
+  Exists: 1
+--- !u!114 &1709377797357231217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1000
+  Exists: 1
 --- !u!114 &1839073026231179632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,6 +651,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &3333728377833584870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/ScreenShake
+  m_EditorClassIdentifier: 
+  Path: event:/FX/ScreenShake
+  guid: 355cf8e9e6024f44aa20d0e5d2e0359c
+  Banks:
+  - {fileID: 7483202873639819963}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &3846594998522420987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,6 +748,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &5209527528058200644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FX.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/FX.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 71808
+  Exists: 1
 --- !u!114 &5260774628254094613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,6 +804,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &6062177108987279432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/FX/SpeechMid
+  m_EditorClassIdentifier: 
+  Path: event:/FX/SpeechMid
+  guid: f2b337aa0bf0b0439931dda685acd058
+  Banks:
+  - {fileID: 7483202873639819963}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 110
 --- !u!114 &6144962431191856948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -661,6 +899,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7027632705426695261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Music.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 470
+  Exists: 1
 --- !u!114 &7211978423208304708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +936,46 @@ MonoBehaviour:
   lastModified: 637218896040000000
   LoadResult: 0
   FileSizes: []
+  Exists: 1
+--- !u!114 &7239249056878154485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 934
+  Exists: 1
+--- !u!114 &7483202873639819963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/FX.bank
+  m_EditorClassIdentifier: 
+  Path: C:/Users/jorge/Documents/GitHub/NaNoRenO/NaNoRenO/Assets/Audio/Desktop/FX.bank
+  SubDir: 
+  lastModified: 637218896040000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 71808
   Exists: 1
 --- !u!114 &7732539839816988857
 MonoBehaviour:
